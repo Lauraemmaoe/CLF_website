@@ -68,7 +68,12 @@ import MainLayout from "../Layout/MainLayout.astro";
     font-size: 6rem;
     padding-left: 7%;
     font-family: "Russo One", sans-serif;
-    font-weight: 400;
+  }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem; /* Juster størrelsen for mindre skærme */
+      padding-left: 5%; /* Juster indrykning for mindre skærme */
+    }
   }
 
   .image-text-container {

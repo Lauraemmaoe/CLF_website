@@ -1,45 +1,59 @@
 ---
 import Burgermenu from "./Burgermenu.astro";
-
 ---
 
+<div class="logo">
+<a href="index.html">
+  <img src="/logo.png" alt="logo" />
+</a>
+</div>
 
 <nav class="menu">
-    <ul>
-        <li><a href="index.html">FORSIDE</a></li>
-        <li><a href="om.html">PROGRAM</a></li>
-        <li><a href="portfolio.html">MAP</a></li>
-        <li><Burgermenu></Burgermenu></li>
-    </ul>
+  <ul>
+    <li>2-25 februar 2024</li>
+    <li><a href="index.html">FORSIDE</a></li>
+    <li><a href="program.astro">PROGRAM</a></li>
+    <li><a href="portfolio.html">MAP</a></li>
+    <li><Burgermenu /></li>
+  </ul>
 </nav>
 
-
 <style>
- .menu ul {
+  .menu ul {
     list-style: none;
     padding: 0;
     margin: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     height: 50px;
   }
 
   .menu li {
     margin: 0 20px;
+    color: white;
+    font-family: Lexend;
   }
 
   .menu a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
     padding: 15px 50px;
-
   }
 
   .menu a:hover {
-    background-color: #8e19d2;
+    background: radial-gradient(#6f2790 0%, #66f0e0 100%);
+    opacity background 0.62;
+    border-radius: 50%;
+  
+    border: 3px solid #000000;
+  }
+
+  .logo {
+    position: absolute;
+    width: 10%;
+    top: 2%;
+    left: 5%;
   }
 </style>
-
-
