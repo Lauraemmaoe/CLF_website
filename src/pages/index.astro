@@ -1,54 +1,41 @@
 ---
-import "../Style/style.css";
+import MainLayout from "../Layout/MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Russo+One&display=swap" rel="stylesheet" />
-  </head>
-
-  <body class="illustration">
-    <article>
-      <div class="image-text-container">
-        <img class="forside_img" src="public/forside_img.webp" alt="" />
-        <div class="text-overlay">
-          <h1>LYS, KUNST, DESIGN, <br /> EVENTS OG BÆREDYGTIGHED</h1>
-        </div>
+<MainLayout title="CLF" background="illustration2">
+  <article>
+    <div class="image-text-container">
+      <img class="forside_img" src="public/forside_img.webp" alt="" />
+      <div class="text-overlay">
+        <h1>LYS, KUNST, DESIGN, <br /> EVENTS OG BÆREDYGTIGHED</h1>
       </div>
-      <div class="container">
-        <h2>Kære lysentusiast</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, dignissimos. Amet sed aut debitis quas voluptas repellendus recusandae saepe atque, in nulla sint veritatis dolores, facere totam fugit expedita quia.</p>
-        <img src="your-image.jpg" alt="Et billede af mig" />
-        <div>
-          <h2>Events</h2>
-          <div class="forside_grid">
-            <div>
-              <img src="your-image.jpg" alt="Et billede af mig" />
-              <button>Lysløbet</button>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A blanditiis sit fugiat quas reiciendis optio incidunt repudiandae, quo voluptatem rerum excepturi praesentium debitis, ea asperiores similique. Voluptatibus sequi ex sit.</p>
-            </div>
-            <div>
-              <img src="your-image.jpg" alt="Et billede af mig" />
-              <button>AfterDAC</button>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsam hic accusantium rem? Consectetur autem soluta nulla? Eum temporibus optio voluptate ab, illum sunt quaerat eius assumenda beatae quia facilis!</p>
-            </div>
+    </div>
+    <div class="container">
+      <h2>Kære lysentusiast</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, dignissimos. Amet sed aut debitis quas voluptas repellendus recusandae saepe atque, in nulla sint veritatis dolores, facere totam fugit expedita quia.</p>
+      <img src="your-image.jpg" alt="Et billede af mig" />
+      <div>
+        <h2>Events</h2>
+        <div class="forside_grid">
+          <div>
+            <img src="your-image.jpg" alt="Et billede af mig" />
+            <button>Lysløbet</button>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A blanditiis sit fugiat quas reiciendis optio incidunt repudiandae, quo voluptatem rerum excepturi praesentium debitis, ea asperiores similique. Voluptatibus sequi ex sit.</p>
+          </div>
+          <div>
+            <img src="your-image.jpg" alt="Et billede af mig" />
+            <button>AfterDAC</button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsam hic accusantium rem? Consectetur autem soluta nulla? Eum temporibus optio voluptate ab, illum sunt quaerat eius assumenda beatae quia facilis!</p>
           </div>
         </div>
-        <div class="udforsk">
-          <h2>Udforsk vores værker</h2>
-          <button>Klik her <link rel="stylesheet" href="singelview.astro" /></button>
-        </div>
       </div>
-    </article>
-  </body>
-</html>
+      <div class="udforsk">
+        <h2>Udforsk vores værker</h2>
+        <button>Klik her <link rel="stylesheet" href="singelview.astro" /></button>
+      </div>
+    </div>
+  </article>
+</MainLayout>
 <style>
   .forside_img {
     max-width: 100%;

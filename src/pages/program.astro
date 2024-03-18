@@ -1,3 +1,34 @@
 ---
-import "../Style/style.css";
+import MainLayout from "../Layout/MainLayout.astro";
+import Programcard from "../Komponenter/Programcard.astro";
+const response = await fetch("https://blnvnuoflfvyhnlelhww.supabase.co/rest/v1/Database CLF", {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsbnZudW9mbGZ2eWhubGVsaHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTYwMDgsImV4cCI6MjAyNjA3MjAwOH0.MzwYu3VMdV5kZ7WOfWD9Mih_W2HkZAABnLM8AvaBHn4",
+  },
+});
+const data = await response.json();
+console.log(data);
 ---
+
+<MainLayout title="CLF - Programliste" background="illustration">
+  <h1>Program</h1>
+  <div class="grid">
+    {
+      data.map((item) => {
+        return <Programcard name={item.name} image={item.image} location={item.location} description={item.description} />;
+      })
+    }
+  </div>
+</MainLayout>
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+</style>
+<!-- {
+    image: 'https://copenhagenlightfestival.org/wp-content/uploads/2024/02/61-Lotus-4-scaled.jpg',
+    name: 'LOTUS',
+    location: 'Vestre Kirkegård',
+    short_description: null
+  }, -->
