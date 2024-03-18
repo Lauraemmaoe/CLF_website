@@ -32,6 +32,13 @@ p {
   font-size: 1rem;
   font-family: "Lexend", sans-serif;
 }
+
+.footer_info a,
+p {
+  font-family: "Lexend", sans-serif;
+  font-weight: lighter;
+}
+
 h2 {
   color: #f3f0f0;
   font-size: 3rem;
