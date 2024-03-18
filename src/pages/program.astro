@@ -12,10 +12,12 @@ console.log(data);
 
 <MainLayout title="CLF - Programliste" background="illustration">
   <h1>Program</h1>
+  <p>I februar 2024 kan lysfestivalens gæster tage på opdagelse i Københavns indre by og i områderne Refshaleøen, Ørestad, DR Koncerthuset, Vestre Kirkegård, Nordhavn og brokvartererne. Alle festivalens lysværker kan opleves via gå-, løbe-, cykel, havnebus- og/eller busruter. Se hér, hvilke 58 lysværker vi præsenterede for festivalens mange gæster hver aften</p>
+  <button>Scroll ned</button>
   <div class="grid">
     {
       data.map((item) => {
-        return <Programcard name={item.name} image={item.image} location={item.location} description={item.description} />;
+        return <Programcard name={item.name} image={item.image} location={item.location} short_description={item.short_description} />;
       })
     }
   </div>
@@ -24,7 +26,29 @@ console.log(data);
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
   }
+  p {
+    font-size: 1.2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 7%;
+  }
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  /* 
+  <article>
+  <img src={image} alt="" />
+  <h3>{name}</h3>
+  <h4>{location}</h4>
+  <p>{description}</p>
+</article>
+ */
 </style>
 <!-- {
     image: 'https://copenhagenlightfestival.org/wp-content/uploads/2024/02/61-Lotus-4-scaled.jpg',
