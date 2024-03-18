@@ -4,13 +4,15 @@
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 body {
-  background-color: #121318;
+  background-color: #06080e;
 }
 .illustration {
   background-image: url("/artboard_1.png");
+  background-repeat: no-repeat;
 }
 .illustration2 {
   background-image: url("/artboard_2.png");
@@ -20,10 +22,15 @@ body {
 h1 {
   color: #f3f0f0;
   font-size: 4rem;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 p {
   color: #f3f0f0;
-  font-size: 2rem;
+  font-size: 1rem;
+  font-family: "Lexend", sans-serif;
 }
 h2 {
   color: #f3f0f0;

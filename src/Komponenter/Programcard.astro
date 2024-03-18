@@ -1,10 +1,31 @@
 ---
-const { image, name, location, description } = Astro.props;
+const { image, name, location, short_description } = Astro.props;
 ---
 
 <article>
   <img src={image} alt="" />
   <h3>{name}</h3>
   <h4>{location}</h4>
-  <p>{description}</p>
+  <p>{short_description}</p>
 </article>
+<style>
+  img {
+    border-radius: 7%;
+    width: 100%;
+    height: auto;
+  }
+  h3 {
+    color: #f3f0f0;
+    font-size: 1.5rem;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom: 4px solid #66f0e0;
+    display: inline-block;
+  }
+  h4 {
+    color: #f3f0f0;
+    font-size: 1rem;
+    font-family: "Lexend", sans-serif;
+  }
+</style>
