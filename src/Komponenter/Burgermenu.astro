@@ -1,0 +1,94 @@
+---
+
+---
+
+<div class="container">
+  <nav class="menu">
+    <div class="inner">
+      <ul>
+        <li><a href="index.html">PROGRAM</a></li>
+        <li><a href="index.html">FESTIVAL MAP 2024</a></li>
+        <li><a href="index.html">FAQ</a></li>
+        <li><a href="index.html">NYHEDSBREV</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="burger-icon">&#9776;</div>
+</div>
+
+<style>
+  .container {
+    /* display: flex; */
+    justify-content: flex-end; /* Justerer elementerne til højre */
+    align-items: center; /* Centrerer elementerne vertikalt */
+  }
+  .burger-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+  }
+
+  .burger-icon {
+    display: block;
+  }
+
+  /* .menu ul {
+    display: none;
+    list-style: none;
+  }
+
+  .menu.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  } */
+  .menu {
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .menu.active {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+
+    display: flex;
+    padding: 20px 100px;
+    margin: 20px;
+  }
+
+  .menu a:hover {
+    background-color: #cf4265;
+  }
+
+  .burger-icon {
+    cursor: pointer;
+    font-size: 60px;
+    position: relative;
+    z-index: 100;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.querySelector(".burger-icon");
+    const menu = document.querySelector(".container .menu");
+
+    burgerIcon.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      burgerIcon.classList.toggle("active");
+    });
+  });
+</script>
