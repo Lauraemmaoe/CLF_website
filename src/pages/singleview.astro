@@ -1,0 +1,66 @@
+---
+import MainLayout from "../Layout/MainLayout.astro";
+import SingleViewCard from "../Komponenter/Single_view_card.astro";
+import Filtreringsknap from "../Komponenter/Filtreringsknap.astro";
+const response = await fetch("https://blnvnuoflfvyhnlelhww.supabase.co/rest/v1/Database CLF", {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsbnZudW9mbGZ2eWhubGVsaHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTYwMDgsImV4cCI6MjAyNjA3MjAwOH0.MzwYu3VMdV5kZ7WOfWD9Mih_W2HkZAABnLM8AvaBHn4",
+  },
+});
+const data = await response.json();
+console.log(data);
+---
+
+<MainLayout title="CLF - Værk" background="illustration2">
+  <div class="singel_view">
+    <h1></h1>
+    <Filtreringsknap />
+    <p></p>
+  </div>
+
+  <div class="grid_2">
+    {
+      data.map((item) => {
+        return <SingleViewCard name={item.name} image={item.image2} location={item.location} description={item.description} />;
+      })
+    }
+  </div>
+</MainLayout>
+
+<style>
+  .grid_2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 7%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+</style>
+<!--  
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Astro</h1>
+    <main>
+      <article>
+      </article>
+    </main>
+  </body>
+</html>
+-->
