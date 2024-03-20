@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../Layout/MainLayout.astro";
 import Button2 from "../Komponenter/Button2.astro";
+import Button3 from "../Komponenter/Button3.astro";
+import Button4 from "../Komponenter/Button4.astro";
 ---
 
 <MainLayout title="CLF" background="illustration2">
@@ -9,43 +11,57 @@ import Button2 from "../Komponenter/Button2.astro";
       <img class="forside_img" src="/forside_img.webp" alt="" />
       <div class="text-overlay">
         <h1>LYS, KUNST, DESIGN, <br /> EVENTS OG BÆREDYGTIGHED</h1>
+
+        <Button4 />
       </div>
     </div>
 
-
     <div class="container">
-      <div class="events_text"><h2>Kære lysentusiast</h2>
-      <p>Velkommen til Copenhagen Light Festival!</div>
-        <p>Vi hylder respekt for mørket og balance gennem interaktion, æstetik og bæredygtighed. 
-          Vores festival præsenterer installationer, der forbedrer livet gennem interaktion med mennesker, arkitektur og rum. </p>
-        Vi ser frem til at byde dig velkommen og dele denne unikke oplevelse med dig. Lad os sammen udforske lysets magi og skabe uforglemmelige øjeblikke på Copenhagen Light Festival!
-      </p>
+      <div class="events_text">
+        <h2>Kære lysentusiast</h2>
+        <p>Velkommen til Copenhagen Light Festival!</p>
+        <p>
+          Vi hylder respekt for mørket og balance gennem interaktion, æstetik og
+          bæredygtighed. Vores festival præsenterer installationer, der
+          forbedrer livet gennem interaktion med mennesker, arkitektur og rum.
+        </p>
+        Vi ser frem til at byde dig velkommen og dele denne unikke oplevelse med
+        dig. Lad os sammen udforske lysets magi og skabe uforglemmelige øjeblikke
+        på Copenhagen Light Festival!
+      </div>
       <img src="skib.avif" alt="Et billede af kanalrunfart" />
-      <div>
+      <div id="scroll2">
         <div class="events_text"><h2>Events</h2></div>
         <div class="forside_grid">
           <div>
-            <img src="Lysloebet.avif" alt="Et billede af folk der løber et maraton i mørke" />
-            <button>Lysløbet</button>
+            <img
+              src="Lysloebet.avif"
+              alt="Et billede af folk der løber et maraton i mørke"
+            />
+            <h5>Lysløbet</h5>
             <p>
-              Vi glæder os til i år at byde velkommen til Lysløbet der afholdes af Copenhagen Light Festival i samarbejde med DGI Nordsjælland.
+              Vi glæder os til i år at byde velkommen til Lysløbet der afholdes
+              af Copenhagen Light Festival i samarbejde med DGI Nordsjælland.
             </p>
+
+            <Button2 />
           </div>
           <div>
             <img src="dac.avif" alt="Et billede af tre personer" />
-            <button>AfterDAC</button>
+            <h5>AfterDAC</h5>
             <p>
-              Kom til AfterDAC og mød en af drivkræfterne bag Copenhagen Light Festival, lysdesigner Jesper Kongshaug, og arkitekt Ellen T. O’Gara, indehaver af tegnestuen Platant.
+              Kom til AfterDAC og mød en af drivkræfterne bag Copenhagen Light
+              Festival, lysdesigner Jesper Kongshaug, og arkitekt Ellen T.
+              O’Gara, indehaver af tegnestuen Platant.
             </p>
+
             <Button2 />
           </div>
         </div>
       </div>
       <div class="udforsk">
         <h2>Udforsk vores værker</h2>
-        <button
-          >Klik her <link rel="stylesheet" href="singelview.astro" /></button
-        >
+        <Button3 />
       </div>
     </div>
   </article>
@@ -71,6 +87,14 @@ import Button2 from "../Komponenter/Button2.astro";
       font-size: 2.5rem; /* Juster størrelsen for mindre skærme */
       padding-left: 5%; /* Juster indrykning for mindre skærme */
     }
+  }
+  h5 {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: "Russo One", sans-serif;
+    text-shadow: 4px 3px 2px #8b26cf;
+
+    border-radius: 2%;
   }
 
   .image-text-container {
