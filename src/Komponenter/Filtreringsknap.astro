@@ -4,7 +4,112 @@
 
 
 
-<button>test</button>
+<button class="filterknap">Program/Indre By
+    <img src="filter.png" alt="filterknap">
+</button>
 
 
+<dialog>
+    <div class="close_button"><form method="dialog">
+        <button class="close">X</button>
+    </form>
+    <h3>Vælg din bydel</h3>
+
+
+   
+</div>
+
+    <form method="bydele">
+        <button class="bydel">Indre By</button>
+        <button class="bydel">Refshaleøen</button>
+        <button class="bydel">Bro-kvarterene</button>
+        <button class="bydel">Ørestad</button>
+        <button class="bydel">Nordhavn</button>
+    </form>
+</dialog>
+
+<script>
+    const visKnap = document.querySelector(".filterknap")
+
+    const dialog = document.querySelector("dialog")
+
+    visKnap.addEventListener("click", showDialog)
+
+    function showDialog() {
+        dialog.showModal();
+    }
+</script>
+
+<style>
+
+    dialog {
+        border-radius: 20px;
+        padding: 25px;
+        background-color: black;
+        border-color:whitesmoke;
+    }
+
+
+
+.filterknap {
+    color: #CE84F0;
+    background-color: white;
+    border-radius: 15px;
+    padding: 8px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px;
+    border: white;
+
+}
+
+.filterknap:hover {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #2200ff;
+}
+
+.filterknap img {
+    width: 2.9vh;
+}
+
+dialog h3 {
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  color:white;
+  font-size: 30px;
+}
+
+.bydel {
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    border: black;
+    display: flex;
+    cursor: pointer;
+    font-family: "Russo One",sans-serif;
+    font-size: 18px;
+    display: inline;
+
+}
+
+.bydel:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #66F0E0;
+}
+
+
+.close {
+color: black;
+align-self: center;
+cursor: pointer;
+}
+
+.close:hover {
+cursor: pointer;
+}
+
+</style>
 
