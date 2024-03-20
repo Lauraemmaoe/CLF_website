@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../Layout/MainLayout.astro";
 import Programcard from "../Komponenter/Programcard.astro";
+import Filtreringsknap from "../Komponenter/Filtreringsknap.astro";
 const response = await fetch("https://blnvnuoflfvyhnlelhww.supabase.co/rest/v1/Database CLF", {
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsbnZudW9mbGZ2eWhubGVsaHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTYwMDgsImV4cCI6MjAyNjA3MjAwOH0.MzwYu3VMdV5kZ7WOfWD9Mih_W2HkZAABnLM8AvaBHn4",
@@ -11,6 +12,7 @@ console.log(data);
 ---
 
 <MainLayout title="CLF - Programliste" background="illustration">
+  <Filtreringsknap />
   <h1>Program</h1>
   <p>I februar 2024 kan lysfestivalens gæster tage på opdagelse i Københavns indre by og i områderne Refshaleøen, Ørestad, DR Koncerthuset, Vestre Kirkegård, Nordhavn og brokvartererne. Alle festivalens lysværker kan opleves via gå-, løbe-, cykel, havnebus- og/eller busruter. Se hér, hvilke 58 lysværker vi præsenterede for festivalens mange gæster hver aften</p>
   <button>Scroll ned</button>
