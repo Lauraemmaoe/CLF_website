@@ -13,17 +13,15 @@ console.log(data);
 
 <MainLayout title="CLF - Programliste" background="illustration">
   <div class="test">
-  <h1>Program</h1>
-  <Filtreringsknap />
-  <p>I februar 2024 kan lysfestivalens gæster tage på opdagelse i Københavns indre by og i områderne Refshaleøen, Ørestad, DR Koncerthuset, Vestre Kirkegård, Nordhavn og brokvartererne. Alle festivalens lysværker kan opleves via gå-, løbe-, cykel, havnebus- og/eller busruter. Se hér, hvilke 58 lysværker vi præsenterede for festivalens mange gæster hver aften.
-  </p>
-</div>
-
+    <h1>Program</h1>
+    <Filtreringsknap />
+    <p>I februar 2024 kan lysfestivalens gæster tage på opdagelse i Københavns indre by og i områderne Refshaleøen, Ørestad, DR Koncerthuset, Vestre Kirkegård, Nordhavn og brokvartererne. Alle festivalens lysværker kan opleves via gå-, løbe-, cykel, havnebus- og/eller busruter. Se hér, hvilke 58 lysværker vi præsenterede for festivalens mange gæster hver aften.</p>
+  </div>
 
   <div class="grid">
     {
       data.map((item) => {
-        return <Programcard name={item.name} image={item.image2} location={item.location} short_description={item.short_description} />;
+        return <Programcard name={item.name} image={item.image2} location={item.location} short_description={item.short_description} slug={item.slug} />;
       })
     }
   </div>
@@ -45,14 +43,12 @@ console.log(data);
   }
   h1 {
     font-size: 5rem;
-
   }
 
   .test {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
   }
 
   /* 

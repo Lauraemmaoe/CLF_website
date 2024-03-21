@@ -1,13 +1,15 @@
 ---
-const { image, name, location, short_description } = Astro.props;
+const { image, name, location, short_description, slug } = Astro.props;
 ---
 
-<article>
-  <img src={image} alt="" />
-  <h3>{name}</h3>
-  <h4>{location}</h4>
-  <p>{short_description}</p>
-</article>
+<a href={`/works/${slug}`}>
+  <article>
+    <img src={image} alt="" />
+    <h3>{name}</h3>
+    <h4>{location}</h4>
+    <p>{short_description}</p>
+  </article></a
+>
 <style>
   article {
     background-color: rgba(32, 29, 29, 0.576);

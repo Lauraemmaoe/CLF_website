@@ -1,0 +1,26 @@
+---
+import MainLayout from "../../Layout/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch("https://blnvnuoflfvyhnlelhww.supabase.co/rest/v1/Database CLF", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsbnZudW9mbGZ2eWhubGVsaHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTYwMDgsImV4cCI6MjAyNjA3MjAwOH0.MzwYu3VMdV5kZ7WOfWD9Mih_W2HkZAABnLM8AvaBHn4",
+    },
+  }).then((response) => response.json());
+
+  return data.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+const { post } = Astro.props;
+console.log(post);
+---
+
+<MainLayout>
+  <h1>{post.artist}</h1>
+  <img src={post.image2} alt="" />
+</MainLayout>
