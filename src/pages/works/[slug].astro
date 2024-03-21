@@ -21,6 +21,28 @@ console.log(post);
 ---
 
 <MainLayout>
-  <h1>{post.artist}</h1>
   <img src={post.image2} alt="" />
+  <h3>{post.name}</h3>
+  <h1>{post.artist}</h1>
+  <p>{post.description}</p>
+  <h4>{post.location}</h4>
 </MainLayout>
+
+<style>
+  img {
+    width: 75%;
+    height: auto;
+    margin-left: 13%;
+    margin-right: 2%;
+  }
+  h1 {
+    color: #72bbca;
+    font-size: 2rem;
+    margin-left: 13%;
+  }
+  p {
+    font-size: 1rem;
+    margin-left: 13%;
+    margin-right: 25%;
+  }
+</style>
