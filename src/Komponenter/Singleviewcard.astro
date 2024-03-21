@@ -1,0 +1,12 @@
+---
+const { image, name, location, description } = Astro.props;
+---
+
+<a href={"works/${data.slug}"}>
+  <article>
+    <img src={image} alt="" />
+    <h3>{name}</h3>
+    <h4>{location}</h4>
+    <p>{description}</p>
+  </article>
+</a>
