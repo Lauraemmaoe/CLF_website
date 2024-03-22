@@ -8,7 +8,7 @@ export async function getStaticPaths() {
       apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsbnZudW9mbGZ2eWhubGVsaHd3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0OTYwMDgsImV4cCI6MjAyNjA3MjAwOH0.MzwYu3VMdV5kZ7WOfWD9Mih_W2HkZAABnLM8AvaBHn4",
     },
   }).then((response) => response.json());
-
+  console.log("data er:", data);
   return data.map((post) => {
     return {
       params: { slug: post.slug },
@@ -17,11 +17,10 @@ export async function getStaticPaths() {
   });
 }
 const { post } = Astro.props;
-console.log(post);
 ---
 
 <MainLayout>
-  <img src={post.image2} alt="" />
+  <img src={post.image} alt="" />
   <h3>{post.name}</h3>
   <h1>{post.artist}</h1>
   <p>{post.description}</p>
